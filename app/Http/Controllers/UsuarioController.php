@@ -39,7 +39,7 @@ class UsuarioController extends Controller
             'email' => 'required|email|unique:users,email',
             //'password' => 'required|same:confimr-password',
             //'password' => 'same:confimr-password',
-            'roles' => 'required'
+            //'roles' => 'required'
         ]);
 
         $input = $request->all();
@@ -78,9 +78,9 @@ class UsuarioController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'email' => 'required|email|unique:users,email'.$id,
-            'password' => 'same:confimr-password',
-            'roles' => 'required'
+            //'email' => 'required|email|unique:users,email'.$id,
+            //'password' => 'same:confimr-password',
+            //'roles' => 'required'
         ]);
 
         $input = $request->all();
